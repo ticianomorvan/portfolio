@@ -21,7 +21,7 @@ const socials: Array<SocialType> = [
   {
     name: "LinkedIn",
     icon: <FaLinkedin />,
-    url: "https://linkedin.com/ticianomorvan",
+    url: "https://linkedin.com/in/ticianomorvan",
   },
   { name: "GitHub", icon: <FaGithub />, url: "https://github.com/Ti7oyan" },
 ];

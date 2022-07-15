@@ -10,6 +10,7 @@ const Home: NextPage = () => {
         <meta charSet="utf-8" />
         <title>Ticiano Morvan | Front-end developer</title>
       </Head>
+
       <Hero />
     </>
   );

@@ -53,3 +53,33 @@
 .projects strong {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 0;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 2em;
+    margin: 1em;
+  }
+
+  .role {
+    font-size: 1.125em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .external_links {
+    flex-direction: column;
+  }
+
+  .projects {
+    margin: auto;
+  }
+}
