@@ -1,0 +1,40 @@
+.tech {
+  display: flex;
+  max-width: 50vw;
+  list-style-type: none;
+  flex-wrap: wrap;
+  margin: 2em;
+  gap: 1.25em;
+}
+
+.icon {
+  font-size: 3em;
+}
+
+.tooltip {
+  border: none;
+  background: none;
+}
+
+.tooltip_content {
+  background-color: #fff;
+  padding: 1em;
+  border: 1px solid #000;
+  border-radius: .25em;
+  animation-name: SlideUp;
+  animation-duration: .15s;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes SlideUp {
+  0% {
+    opacity: 0%;
+    transform: translateY(2.5px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}

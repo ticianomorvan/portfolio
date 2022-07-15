@@ -31,3 +31,7 @@
 .link_content:hover {
   color: #666;
 }
+
+.selected {
+  text-decoration: underline;
+}

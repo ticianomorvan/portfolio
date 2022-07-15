@@ -1,39 +1,70 @@
 import type { ReactElement } from 'react'
 import type { IconType } from 'react-icons'
+import { motion } from 'framer-motion';
 import styles from './About.module.css'
 
 // Icons
-import { FaDatabase, FaJs, FaLinux, FaServer, FaTerminal } from 'react-icons/fa';
+import { FaDatabase, FaLinux, FaServer, FaTerminal, FaReact } from 'react-icons/fa';
 
 type TechType = {
   title: string,
-  icon: ReactElement<IconType>
+  icon: ReactElement<IconType>,
 }
 
 const Area = ({ title, icon }: TechType) => (
-  <li className={styles.area}>
+  <motion.li
+    className={styles.area}
+    whileHover={{ scale: 1.25, cursor: 'default' }}
+  >
     <span className={styles.area_icon}>
       {icon}
     </span>
     <p className={styles.area_title}>
       {title}
     </p>
-  </li>
+  </motion.li>
 )
+
+const areas: Array<TechType> = [
+  {
+    title: "Web Development",
+    icon: <FaReact />
+  },
+  {
+    title: 'Back-end',
+    icon: <FaDatabase />,
+  },
+  {
+    title: 'Cloud',
+    icon: <FaServer />,
+  },
+  {
+    title: 'CLI',
+    icon: <FaTerminal />,
+  },
+  {
+    title: 'Linux',
+    icon: <FaLinux />,
+  }
+]
 
 export default function About() {
   return (
-    <section id="about" className={styles.container}>
-      <p className={styles.about_principal}>I&apos;m a front-end developer learning about <strong>back-end</strong> and <strong>cloud</strong>.</p>
+    <motion.section
+      id="about"
+      className="section_container"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <h3 className="title">I&apos;m a front-end developer learning about <strong>back-end</strong> and <strong>cloud</strong>.</h3>
+      <h4 className="subtitle">Since I was fifteen, I worked with many technologies in these areas:</h4>
 
-      <p>I learned and worked on</p>
       <ul className={styles.area_container}>
-        <Area title="Web Development" icon={<FaJs />} />
-        <Area title="Back-end" icon={<FaDatabase />} />
-        <Area title="Cloud Deployment" icon={<FaServer />} />
-        <Area title="CLI Apps" icon={<FaTerminal />} />
-        <Area title="Linux Environments" icon={<FaLinux />} />
+        {areas.map(({ title, icon}) => (
+          <Area key={title} title={title} icon={icon} />
+        ))}
       </ul>
-    </section>
+    </motion.section>
   )
 }

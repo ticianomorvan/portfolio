@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
 import styles from "./Navbar.module.css";
 
-const PageAnchor = ({ id, name }: { id: string, name: string }) => (
-  <li>
-    <a href={`#${id}`} className={styles.link_url}>
-      <p className={styles.link_content}>{name}</p>
-    </a>
-  </li>
-) 
+type PageAnchorType = {
+  id: string,
+  name: string,
+}
+
+const PageAnchor = ({ id, name }: PageAnchorType) => (
+    <li>
+      <a href={`#${id}`} className={styles.link_url}>
+        <p className={styles.link_content}>
+          {name}
+        </p>
+      </a>
+    </li>
+)
 
 const anchors: Array<{id: string, name: string}> = [
   { id: 'home', name: 'Home'},
@@ -28,7 +35,9 @@ export default function Navbar() {
         ease: 'easeInOut'
       }}
     >
-      <p className={styles.name}>TM</p>
+      <span>
+        <p className={styles.name}>TM</p>
+      </span>
 
       <ul className={styles.link_container}>
         {anchors.map(({ id, name }) => (

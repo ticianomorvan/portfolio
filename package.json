@@ -10,6 +10,7 @@
     "prettier": "prettier -c ."
   },
   "dependencies": {
+    "@radix-ui/react-tooltip": "^0.1.7",
     "framer-motion": "^6.5.1",
     "next": "12.2.2",
     "react": "18.2.0",
