@@ -1,0 +1,19 @@
+.container {
+  list-style-type: none;
+  display: flex;
+  gap: 1em;
+  padding: 1em 0em;
+}
+
+.url {
+  color: #000;
+  transition: color .35s;
+}
+
+.url:hover {
+  color: #333;
+}
+
+.icon {
+  font-size: 2em;
+}

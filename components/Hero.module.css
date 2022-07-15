@@ -8,7 +8,13 @@
 }
 
 .presentation {
+  display: flex;
+  gap: 4em;
   opacity: 0;
+}
+
+.information {
+  align-self: center;
 }
 
 .name {
@@ -23,32 +29,27 @@
   text-align: start;
 }
 
-.image_container {
-  align-self: center;
-  height: 300px;
-  width: 400px;
+.external_links {
+  display: flex;
+  padding: 1em 0;
+  gap: 1em;
 }
 
-.image {
-  border-radius: 0.25em;
+.blog, .projects {
+  color: #000;
+  transition: color .35s;
 }
 
-.image_caption {
-  text-align: center;
-  opacity: 75%;
-  padding: 0.5em;
+.blog:hover, .projects:hover {
+  color: #333;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    height: 100vh;
-  }
+.projects {
+  display: flex;
+  text-decoration: none;
+  gap: .25em;
+}
 
-  .role {
-    text-align: center;
-  }
-
-  .image_container {
-    display: none;
-  }
+.projects strong {
+  text-decoration: underline;
 }

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
-import landscape from "../public/images/picture_1.jpg";
 import styles from "./Hero.module.css";
+import SkillsContainer from "./Skills";
+import Socials from "./Socials";
 
 export default function Hero() {
   return (
@@ -14,46 +14,38 @@ export default function Hero() {
         }}
         transition={{ ease: "easeOut" }}
       >
-        <span>
+        <span className={styles.information}>
           <h1 className={styles.name}>
             I&apos;m <strong>Ticiano Morvan</strong>
           </h1>
           <h2 className={styles.role}>
             Self taught front-end developer and student.
           </h2>
+
+          <span className={styles.external_links}>
+            <a
+              className={styles.blog}
+              href="https://blog.ticianomorvan.me/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <strong>Blog</strong>
+            </a>
+            <a
+              className={styles.projects}
+              href="https://github.com/Ti7oyan/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <strong>Projects</strong> <p>(Check pinned repositories)</p>
+            </a>
+          </span>
+
+          <Socials />
         </span>
+
+        <SkillsContainer />
       </motion.section>
-
-      <motion.div
-        className={styles.image_container}
-        animate={{
-          y: [100, 0],
-          opacity: [0, 1],
-        }}
-        transition={{
-          duration: 1,
-          delay: 1,
-        }}
-      >
-        <Image
-          src={landscape}
-          alt="A cold lake in the south of Argentina."
-          className={styles.image}
-        />
-
-        <motion.p
-          className={styles.image_caption}
-          animate={{
-            x: [0, 5, -5, 5, -5, 0],
-          }}
-          transition={{
-            delay: 2,
-            ease: "easeOut",
-          }}
-        >
-          Also, I love to take photos!
-        </motion.p>
-      </motion.div>
     </div>
   );
 }

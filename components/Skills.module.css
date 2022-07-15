@@ -1,50 +1,13 @@
 .tech {
-  display: flex;
-  max-width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   list-style-type: none;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 2em;
+  margin: 2em 0;
   gap: 1.25em;
 }
 
 .icon {
   font-size: 3em;
-}
-
-.tooltip {
-  border: none;
-  background: none;
-}
-
-.tooltip_content {
-  background-color: #fff;
-  padding: 1em;
-  border: 1px solid #000;
-  border-radius: .25em;
-  animation-name: SlideUp;
-  animation-duration: .15s;
-  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-  animation-fill-mode: forwards;
-}
-
-@keyframes SlideUp {
-  0% {
-    opacity: 0%;
-    transform: translateY(2.5px);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: translateX(0);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .tech {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: max-content;
-    margin: 2em 0;
-  }
 }
