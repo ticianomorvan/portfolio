@@ -7,7 +7,7 @@
 body {
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -35,4 +35,24 @@ body {
 
 .title, .subtitle {
   font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    text-align: center;
+  }
+
+  .section_container {
+    gap: 0;
+    height: 100%;
+  }
+
+  .title {
+    font-size: 1.5em;
+    padding: 1.25em;
+  }
+
+  .subtitle {
+    font-size: 1.125em;
+  }
 }

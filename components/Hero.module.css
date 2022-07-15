@@ -20,7 +20,7 @@
 .role {
   font-size: 1.5em;
   font-weight: 400;
-  text-align: center;
+  text-align: start;
 }
 
 .image_container {
@@ -37,4 +37,18 @@
   text-align: center;
   opacity: 75%;
   padding: 0.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    height: 100vh;
+  }
+
+  .role {
+    text-align: center;
+  }
+
+  .image_container {
+    display: none;
+  }
 }
