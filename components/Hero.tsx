@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import styles from "./Hero.module.css";
 import SkillsContainer from "./Skills";
 import Socials from "./Socials";
 
 export default function Hero() {
   return (
-    <div id="home" className={styles.container}>
+    <div className={styles.container}>
       <motion.section
         className={styles.presentation}
         animate={{
@@ -31,14 +32,9 @@ export default function Hero() {
             >
               <strong>Blog</strong>
             </a>
-            <a
-              className={styles.projects}
-              href="https://github.com/Ti7oyan/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <strong>Projects</strong> <p>(Check pinned repositories)</p>
-            </a>
+            <Link href="/projects">
+              <strong className={styles.projects}>Projects</strong>
+            </Link>
           </span>
 
           <Socials />

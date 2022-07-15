@@ -45,13 +45,8 @@
 }
 
 .projects {
-  display: flex;
-  text-decoration: none;
-  gap: .25em;
-}
-
-.projects strong {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
