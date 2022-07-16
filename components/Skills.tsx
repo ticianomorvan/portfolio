@@ -1,15 +1,18 @@
 import Tooltip from "./Tooltip";
-import tech from "../data/skills";
+import skills from "../data/skills";
+import tech from "../models/tech";
 import styles from "./Skills.module.css";
 
 export default function SkillsContainer() {
   return (
     <ul className={styles.tech}>
-      {tech.map(({ name, icon }) => (
-        <Tooltip key={name} text={name}>
-          <span className={styles.icon}>{icon}</span>
-        </Tooltip>
-      ))}
+      {skills.map((skill) =>
+        skill.toLowerCase() in tech ? (
+          <Tooltip key={skill} text={skill}>
+            <span className={styles.icon}>{tech[skill.toLowerCase()]}</span>
+          </Tooltip>
+        ) : null
+      )}
     </ul>
   );
 }

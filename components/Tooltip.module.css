@@ -7,9 +7,9 @@
   background-color: #fff;
   padding: 1em;
   border: 1px solid #000;
-  border-radius: .25em;
+  border-radius: 0.25em;
   animation-name: SlideUp;
-  animation-duration: .15s;
+  animation-duration: 0.15s;
   animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   animation-fill-mode: forwards;
 }
