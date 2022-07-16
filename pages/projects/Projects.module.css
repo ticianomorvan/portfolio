@@ -25,3 +25,17 @@
   background-color: #eee;
   cursor: pointer;
 }
+
+.projects { 
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1em 0;
+  gap: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

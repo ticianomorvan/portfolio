@@ -1,4 +1,6 @@
-const skills: Array<string> = [
+import TechType from '../types/tech'
+
+const skills: Array<TechType> = [
   'React',
   'Next.js',
   'TypeScript',
@@ -21,4 +23,4 @@ const skills: Array<string> = [
   'Linux'
 ]
 
-export default skills
+export default skills;

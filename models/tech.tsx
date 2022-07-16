@@ -29,7 +29,7 @@ interface IDictionary {
   [index: string]: ReactElement<IconType>;
 }
 
-const tech: IDictionary = {
+export const tech: IDictionary = {
   react: <SiReact />,
   "next.js": <SiNextdotjs />,
   typescript: <SiTypescript />,
