@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16.x
           cache: pnpm
-          cache-dependeny-path: pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
       - name: Install pnpm
         run: npm i -g pnpm
       - name: Install dependencies
