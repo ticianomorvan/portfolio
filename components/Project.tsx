@@ -45,12 +45,13 @@ export default function Project({
       <h4 className={styles.subtitle}>{subtitle}</h4>
 
       <span>
-        <Image
-          src={`${wakatime}?style=social`}
-          alt={`${title}'s wakatime badge.`}
-          width={173}
-          height={20}
-        />
+        <picture>
+          <source srcSet={`${wakatime}?style=social`} type="image/svg" />
+          <img
+            src={`${wakatime}?style=social`}
+            alt={`${title}'s Wakatime badge.`}
+          />
+        </picture>
       </span>
 
       <p className={styles.description}>{description}</p>
