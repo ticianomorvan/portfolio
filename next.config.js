@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['wakatime.com']
-  }
+    domains: ["wakatime.com"],
+  },
 };
 
 module.exports = nextConfig;

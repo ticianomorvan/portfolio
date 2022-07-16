@@ -35,12 +35,14 @@
   gap: 1em;
 }
 
-.blog, .projects {
+.blog,
+.projects {
   color: #000;
-  transition: color .35s;
+  transition: color 0.35s;
 }
 
-.blog:hover, .projects:hover {
+.blog:hover,
+.projects:hover {
   color: #333;
 }
 

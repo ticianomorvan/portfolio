@@ -4,12 +4,12 @@
   justify-content: space-between;
   padding: 1em;
   border: 1px solid #000;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .title {
   font-size: 2em;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 .subtitle {
@@ -34,13 +34,14 @@
   gap: 1em;
 }
 
-.link, .tech {
+.link,
+.tech {
   font-size: 2.5em;
   color: #000;
 }
 
 .link {
-  transition: color .35s;
+  transition: color 0.35s;
 }
 
 .link:hover {

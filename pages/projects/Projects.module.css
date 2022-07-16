@@ -13,12 +13,12 @@
 
 .back {
   display: flex;
-  gap: .5em;
-  margin: .5em 0;
-  padding: .5em .5em;
+  gap: 0.5em;
+  margin: 0.5em 0;
+  padding: 0.5em 0.5em;
   border: 1px solid #000;
   width: max-content;
-  transition: background-color .35s;
+  transition: background-color 0.35s;
 }
 
 .back:hover {
@@ -26,7 +26,7 @@
   cursor: pointer;
 }
 
-.projects { 
+.projects {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
