@@ -18,8 +18,10 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - name: Install pnpm
-        run: npm i -g pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.x
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install
       - name: Run prettier
         run: pnpm run prettier
