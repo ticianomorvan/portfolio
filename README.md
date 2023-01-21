@@ -1,5 +1,3 @@
-This is my portfolio.
+# My personal portfolio
 
-It's more like a personal introduction because it's minimalist as much as it can but, I like it.
-
-You can clone it if you want, the main stack of the portfolio is `Next.js`, `CSS Modules`, and `react-icons`.
+Minimal as f*ck, but I like it that way. It uses Astro and I think it's cool.

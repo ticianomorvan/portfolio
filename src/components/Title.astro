@@ -1,0 +1,123 @@
+---
+import { principal, secondary } from "../data/stack";
+import Technology from "../components/Technology.astro";
+---
+
+<section class="title">
+  <h1>DESARROLLADOR FULL-STACK</h1>
+  <div class="stack">
+    <div class="stack-group" id="principal">
+      {
+        principal.map((item) => (
+          <Technology name={item.name} icon={item.icon} />
+        ))
+      }
+    </div>
+    <div class="stack-group" id="secondary">
+      {
+        secondary.map((item) => (
+          <Technology name={item.name} icon={item.icon} />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="resume">
+    <a href="cv-ticianomorvan.pdf">
+      Currículum (ES)
+    </a>
+    <a href="cv-ticianomorvan-en.pdf">
+      Resume (EN)
+    </a>
+  </div>
+</section>
+
+<style>
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation-name: load-title;
+    animation-duration: 1s;
+  }
+
+  .title h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  @keyframes load-title {
+    0% {
+      opacity: 0%;
+      transform: translateY(-1em);
+    }
+
+    100% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-block: 1.75em;
+    gap: 1.5em;
+  }
+
+  .stack div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .stack-group[id="secondary"] {
+    filter: brightness(0.5);
+  }
+
+  .resume {
+    display: flex;
+    gap: 0.5em;
+    opacity: 0;
+    animation: load-resume 0.5s ease-in-out 1.5s forwards;
+  }
+
+  .resume > a {
+    background-color: var(--yellow); 
+    padding: 0.5em;
+    color: #000;
+    border-radius: 0.25em;
+  }
+
+  .resume > a:hover {
+    filter: brightness(0.85);
+  }
+
+  @keyframes load-resume {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .title h1 {
+      font-size: 5em;
+    }
+
+    .stack {
+      justify-content: center;
+    }
+  }
+</style>

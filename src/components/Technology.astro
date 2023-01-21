@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon"
+
+export interface Props {
+  name: string
+  icon: string
+}
+
+const { name, icon } = Astro.props
+---
+
+<span title={name}>
+  <Icon name={icon} size="36" />
+</span>
+
+<style>
+  span {
+    opacity: 0;
+    animation-name: show-technology;
+    animation-duration: 0.75s;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+  }
+
+	@keyframes show-technology {
+		0% {
+			transform: translateY(-0.5em);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+</style>

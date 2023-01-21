@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Title from '../components/Title.astro';
+import About from '../components/About.astro';
+---
+
+<Layout title="Ticiano Morvan | Full-stack Developer">
+	<main>
+		<Title />
+		<About />
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+		max-width: 90%;
+		margin: auto;
+	}
+</style>

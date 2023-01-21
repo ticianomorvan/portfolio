@@ -1,0 +1,64 @@
+---
+import { socials } from "src/data/socials";
+import { Icon } from "astro-icon";
+---
+
+<section id="about-me" class="about">
+  <picture class="profile-picture">
+    <img src="/ticianomorvan.jpg" alt="Ticiano Morvan" />
+  </picture>
+
+  <span class="information">
+    <h2>¡Hola, soy Ticiano!</h2>
+    <p>
+      Soy un programador de full-stack actualmente trabajando en
+      <a href="https://cresi.com.ar" target="_blank" rel="noreferrer">CrESI</a>
+      buscando aportar mis conocimientos técnicos para el desarrollo de su plataforma digital de enseñanza.
+      Soy autodidacta desde los quince años, habiendo participado en muchos proyectos pequeños y algunos medianos,
+      que me permitieron evolucionar y aprender muchos conceptos y tecnologías que uso en mi día a día.
+    </p>
+
+    <div class="socials">
+      {socials.map((social) => (
+        <a title={social.name} href={social.href} target="_blank" rel="noreferrer">
+          <Icon size={32} name={social.icon} />
+        </a>
+      ))}
+    </div>
+  </span>
+</section>
+
+<style>
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .information {
+    max-width: 48ch;
+  }
+
+  .profile-picture {
+    max-width: 160px;
+  }
+  
+  .profile-picture img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  .socials {
+    display: flex;
+    gap: 1em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .profile-picture {
+      max-width: 320px;
+    }
+  }
+</style>

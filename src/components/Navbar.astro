@@ -1,0 +1,31 @@
+<nav>
+  <p>
+    <b>TM</b>
+    {' | '}
+    Ticiano Morvan
+  </p>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    position: fixed;
+    padding: 0.5em;
+    width: 100%;
+    top: 0;
+    justify-content: center;
+    transform: translateY(-10em);
+    backdrop-filter: blur(5px);
+    animation: show-navbar 0.75s ease-in-out 1.5s forwards;
+  }
+
+  @keyframes show-navbar {
+    0% {
+      transform: translateY(-10em);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>
