@@ -1,0 +1,57 @@
+---
+import { Icon } from 'astro-icon';
+import { routes } from '../data/routes'
+---
+
+<nav class="navigation">
+  <h1 class="navigation-name">Ticiano Morvan</h1>
+
+  <span class="navigation-routes">
+    {routes.map((route) => (
+      <a class="navigation-routes-children" href={route.href}>
+        <Icon name={route.icon} size={24} />
+        <p>{route.label}</p>
+      </a>
+    ))}
+  </span>
+</nav>
+
+<style>
+  .navigation {
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-inline: 1em;
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+    color: var(--primary);
+    border-bottom: 0.125em solid #262626;
+  }
+
+  .navigation-name {
+    font-weight: 400;
+  }
+
+  .navigation-routes {
+    display: flex;
+    gap: 1em;
+  }
+
+  .navigation-routes-children {
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 150ms ease;
+  }
+
+  .navigation-routes-children:hover {
+    background-color: var(--primary);
+    color: #000;
+  }
+</style>

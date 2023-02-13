@@ -1,81 +1,164 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon'
+
+import { socials } from '../data/socials'
+import { stack } from '../data/stack'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ticiano Morvan | Full-stack developer from Argentina">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+		<section class="content-section">
+			<span>
+				<h2 class="content-title">Physically typing code, mentally passionate about my projects.</h2>
+				<p class="content-description">Self-taught since fifteen, I'm a truly dedicated software developer focused on delivering high-quality applications built on web technologies.</p>
+
+				<span class="hero-cta">
+					<a class="hero-cta-contact" href="mailto:ticiano.morvan@gmail.com">
+						<Icon name="tabler:mail" size={16} />
+						Get in touch
+					</a>
+
+					{socials.map((social) => (
+						<a
+							class="hero-cta-social"
+							title={social.name}
+							href={social.href}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<Icon name={social.icon} size={36} />
+						</a>
+					))}
+				</span>
+			</span>
+
+			<img
+				class="hero-picture"
+				src="https://avatars.githubusercontent.com/u/74388638?v=4"
+				alt="Ticiano Morvan"
 			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		</section>
+
+		<section id="about-me" class="content-section">
+			<span>
+				<h2 class="content-title">About me</h2>
+				<p class="content-description">
+					I'm Ticiano Morvan, self-taught software developer since fifteen.
+					I started learning programming in 2020, looking to create my own Discord bot.
+					Now, years of constant learning before, I'm a passionate full-stack developer with a strong focus in creating reusable and efficient user interfaces and experiences.
+					I'm currently working as a Software Development Lead at <a class="content-anchor" href="https://cresi.com.ar" target="_blank" rel="noreferrer">CrESI</a>, where we work
+					to re-think education and create new and useful experiences for general public.
+				</p>
+			</span>
+
+			<span class="about-me-memory">
+				<img
+					class="about-me-memory-picture"
+					src="/images/using-graphic-tablet.jpg"
+					alt="Ticiano using a graphic tablet"
+				/>
+
+				<p>Me as a fifteen-years-old, prototyping my first projects.</p>
+			</span>
+		</section>
+
+		<section id="stack" class="content-section stack-section">
+			<h2 class="content-title">My tech-stack</h2>
+			<p class="content-description">Even if I build principally web applications, I have knowledge and experience in several other technologies.</p>
+
+			<span class="stack-technologies">
+				{stack.map((technology) => (
+					<Icon name={technology.icon} title={technology.label} size={64} />
+				))}
+			</span>
+		</section>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		color: #fff;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+
+	.content-section {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.content-title {
+		max-width: 32ch;
+		font-weight: 400;
+		font-size: 2em;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	.content-description {
+		max-width: 48ch;
+		font-size: 1.25em;
+		line-height: 1.25em;
+		color: #ccc;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+
+	.content-anchor {
+		color: var(--primary);
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
+
+	.hero-cta {
+		display: flex;
+		align-items: center;
+		gap: 1em;
 	}
-	.link-card-grid {
+
+	.hero-cta-contact {
+		padding: 1em;
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		color: #000;
+		background-color: var(--primary);
+		text-decoration: none;
+	}
+
+	.hero-cta-contact:hover {
+		filter: brightness(0.9);
+	}
+
+	.hero-cta-social {
+		color: #fff;
+	}
+
+	.hero-picture {
+		max-width: 16em;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0.25em #000, 0 0 0 0.5em #fff;
+	}
+
+	.about-me-memory {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1em;
+	}
+
+	.about-me-memory-picture {
+		max-width: 18em;
+		border-radius: 1.25em;
+		box-shadow: 0 0 5em hsl(60, 60%, 10%);
+	}
+
+	.stack-section {
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.stack-technologies {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 2em;
 	}
 </style>
