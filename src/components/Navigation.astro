@@ -8,9 +8,9 @@ import { routes } from '../data/routes'
 
   <span class="navigation-routes">
     {routes.map((route) => (
-      <a class="navigation-routes-children" href={route.href}>
+      <a class="navigation-route" href={route.href}>
         <Icon name={route.icon} size={24} />
-        <p>{route.label}</p>
+        <p class="navigation-route-label">{route.label}</p>
       </a>
     ))}
   </span>
@@ -23,7 +23,6 @@ import { routes } from '../data/routes'
     position: fixed;
     top: 0;
     left: 0;
-    padding-inline: 1em;
     display: flex;
     justify-content: space-around;
     background-color: #000;
@@ -37,10 +36,9 @@ import { routes } from '../data/routes'
 
   .navigation-routes {
     display: flex;
-    gap: 1em;
   }
 
-  .navigation-routes-children {
+  .navigation-route {
     padding: 0.5em;
     display: flex;
     align-items: center;
@@ -50,8 +48,18 @@ import { routes } from '../data/routes'
     transition: all 150ms ease;
   }
 
-  .navigation-routes-children:hover {
+  .navigation-route:hover {
     background-color: var(--primary);
     color: #000;
+  }
+
+  .navigation-route-label {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .navigation-route-label {
+      display: block;
+    }
   }
 </style>
