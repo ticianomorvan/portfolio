@@ -1,7 +1,4 @@
-interface Technology {
-  label: string
-  icon: string
-}
+import type { Technology } from "../types/technology"
 
 export const stack: Technology[] = [
   { label: 'React', icon: 'simple-icons:react' },

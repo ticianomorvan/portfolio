@@ -4,6 +4,8 @@ import { Icon } from 'astro-icon'
 
 import { socials } from '../data/socials'
 import { stack } from '../data/stack'
+import { projects } from '../data/projects';
+import Project from '../components/Project.astro';
 ---
 
 <Layout title="Ticiano Morvan | Full-stack developer from Argentina">
@@ -63,7 +65,7 @@ import { stack } from '../data/stack'
 			</span>
 		</section>
 
-		<section id="stack" class="content-section stack-section">
+		<section id="stack" class="content-section one-column">
 			<span>
 				<h2 class="content-title">My tech-stack</h2>
 				<p class="content-description">Even if I build principally web applications, I have knowledge and experience in several other technologies.</p>
@@ -72,6 +74,19 @@ import { stack } from '../data/stack'
 			<span class="stack-technologies">
 				{stack.map((technology) => (
 					<Icon class="stack-technologies-children" name={technology.icon} title={technology.label}/>
+				))}
+			</span>
+		</section>
+
+		<section id="projects" class="content-section one-column">
+			<span>
+				<h2 class="content-title">Projects</h2>
+				<p class="content-description">Every theorical knowledge needs practical work, here are some my personal projects.</p>
+			</span>
+
+			<span class="projects-container">
+				{projects.map((project) => (
+					<Project data={project} />
 				))}
 			</span>
 		</section>
@@ -86,7 +101,7 @@ import { stack } from '../data/stack'
 	}
 
 	.content-section {
-		margin-block: 2em;
+		margin-block: 2em 4em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -155,12 +170,6 @@ import { stack } from '../data/stack'
 		box-shadow: 0 0 5em hsl(60, 60%, 10%);
 	}
 
-	.stack-section {
-		width: 100%;
-		flex-direction: column;
-		text-align: center;
-	}
-
 	.stack-technologies {
 		width: 100%;
 		display: grid;
@@ -173,15 +182,10 @@ import { stack } from '../data/stack'
 		max-width: 3em;
 	}
 
-	@media screen and (min-width: 768px) {
-		.content-section {
-			height: 100vh;
-			flex-direction: row;
-		}
-
-		.stack-section {
-			flex-direction: column;
-		}
+	.projects-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1em;
 	}
 
 	@media screen and (min-width: 768px) {
@@ -191,11 +195,34 @@ import { stack } from '../data/stack'
 
 		.content-section {
 			min-height: 100vh;
+			flex-direction: row;
 			margin-block: 0;
 		}
 
+		.content-title {
+			font-size: 3em;
+		}
+
+		.hero-picture {
+			max-width: 18em;
+		}
+
+		.one-column {
+			text-align: center;
+			flex-direction: column;
+		}
+	
 		.stack-technologies {
-			grid-template-columns: repeat(7, 1fr);
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+		.stack-technologies-children {
+			max-width: 4em;
+		}
+
+		.projects-container {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
+
 </style>

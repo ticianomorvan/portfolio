@@ -1,0 +1,90 @@
+---
+import type { Project } from '../types/project';
+import { Icon } from 'astro-icon';
+
+interface Props {
+  data: Project
+}
+
+const { data } = Astro.props
+---
+
+<div class="project-container" id={data.name}>
+  <p class="project-title">{data.name}</p>
+  <p class="project-description">{data.description}</p>
+
+  <span class="project-details">
+    <span class="project-details-hyperlinks">
+      <a
+        href={data.githubUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon name="simple-icons:github" size={32} />
+      </a>
+
+      {data.deploymentUrl && (
+        <a
+          href={data.deploymentUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon name="tabler:world" size={32} />
+        </a>
+      )}
+    </span>
+
+    <span class="project-details-stack">
+      {data.stack.map((technology) => (
+        <Icon
+          title={technology.label}
+          name={technology.icon}
+          size={24}
+        />
+      ))}
+    </span>
+  </span>
+</div>
+
+<style>
+  .project-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.25em;
+    background-color: var(--primary);
+    color: #000;
+    text-align: start;
+  }
+
+  .project-title {
+    font-size: 2em;
+  }
+
+  .project-title, .project-description {
+    margin-block: 0.5em;
+  }
+
+  .project-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project-details-hyperlinks {
+    padding-block: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .project-details-hyperlinks a {
+    color: #000;
+  }
+
+  .project-details-stack {
+    display: flex;
+    gap: 0.5em;
+  }
+</style>
