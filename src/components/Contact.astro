@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon";
+
+import Anchor from "./Anchor.astro";
+
+import socialsData from "../data/socials.json";
+---
+
+<section id="contact" class="my-16 flex flex-col gap-4 items-center">
+  <h2 class="my-2 text-5xl font-serif">Want to create something?</h2>
+  <p class="text-xl text-gray-400">
+    Let's discuss it further and build something interesting!
+  </p>
+
+  <span class="flex gap-4 items-center">
+    <a href="mailto:ticiano.morvan@gmail.com" class="h-fit">
+      <Anchor href="mailto:ticiano.morvan@gmail.com">
+        Send email
+        <Icon name="tabler:mail" size="24" />
+      </Anchor>
+    </a>
+
+    <ul class="flex items-center gap-2">
+      {
+        socialsData.map((social) => (
+          <li title={`Link to Ticiano's ${social.name}`}>
+            <a href={social.url} target="_blank" rel="noreferrer">
+              <Icon name={social.icon} size="36" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </span>
+</section>

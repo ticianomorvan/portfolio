@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="min-h-screen flex flex-col justify-around items-center">
+  <span class="my-12">
+    <h3 class="my-6 text-5xl font-serif">Impact</h3>
+    <h4 class="text-xl">
+      In more than three years of programming, I've had some interesting
+      experiences to showcase.
+    </h4>
+  </span>
+
+  <div class="w-full my-6 flex justify-evenly items-center">
+    <span class="max-w-lg">
+      <h3 class="my-6 text-5xl font-serif">Web Summit Rio</h3>
+      <p class="text-gray-400">
+        This was the first event I attended, as well as the first event
+        alongside CrESI. We participated as an Impact Startup of their ALPHA
+        Startup Programme. I talked with a lot of people from all over the world
+        but specially brazilians, who were very interested in our work and
+        congratulated us for being pioneers in the LATAM market.
+      </p>
+    </span>
+
+    <Image
+      src="/images/wsr_sign.jpeg"
+      alt="Ticiano sitting on the sign of Web Summit Rio 2023"
+      width={533}
+      height={400}
+      class="rounded-lg"
+    />
+  </div>
+
+  <div class="w-full my-6 flex justify-evenly items-center">
+    <span class="max-w-lg">
+      <h3 class="my-6 text-5xl font-serif">Leading an unexplored market</h3>
+      <p class="text-gray-400">
+        As days were passing and I was talking to more and more people, I
+        discovered that we were trying to shine in a market with very few or no
+        real competitors, because we work on a topic that is considered a
+        "taboo". This, of course, made me very happy and motivated to keep
+        working on better solutions and to make CrESI spread worldwide.
+      </p>
+    </span>
+
+    <Image
+      src="/images/wsr_stand.jpeg"
+      alt="Ticiano presenting CrESI at Web Summit Rio 2023"
+      width={300}
+      height={200}
+      class="object-cover rounded-lg"
+    />
+
+    <Image
+      src="/images/wsr_conf.jpeg"
+      alt="Ticiano attending Startup Roundtables at Web Summit Rio 2023"
+      width={300}
+      height={200}
+      class="object-cover rounded-lg"
+    />
+  </div>
+</section>

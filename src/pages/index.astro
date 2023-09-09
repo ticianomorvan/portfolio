@@ -3,19 +3,22 @@ import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
+import Anchor from "../components/Anchor.astro";
 
 // Sections
 import Philosophy from "../components/Philosophy.astro";
 import Stack from "../components/Stack.astro";
 import Studies from "../components/Studies.astro";
+import Experience from "../components/Experience.astro";
+import Media from "../components/Media.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Ticiano Morvan, student & software developer">
 	<main>
 		<section class="min-h-screen flex flex-col items-center justify-center">
 			<Image
-				src="/profile.jpg"
+				src="/images/profile.jpg"
 				alt="Ticiano Morvan's profile picture"
 				width={192}
 				height={192}
@@ -37,14 +40,14 @@ import Studies from "../components/Studies.astro";
 					<Icon name="tabler:arrow-narrow-down" size="24" />
 				</span>
 
-				<Button>
+				<Anchor href="#contact">
 					Work together
 					<Icon
 						class="transitio duration-150 group-hover:translate-x-1"
 						name="tabler:arrow-narrow-right"
 						size="24"
 					/>
-				</Button>
+				</Anchor>
 			</div>
 		</section>
 
@@ -53,5 +56,11 @@ import Studies from "../components/Studies.astro";
 		<Stack />
 
 		<Studies />
+
+		<Experience />
+
+		<Media />
+
+		<Contact />
 	</main>
 </Layout>
