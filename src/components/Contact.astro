@@ -13,7 +13,10 @@ import socialsData from "../data/socials.json";
   </p>
 
   <span class="flex gap-4 items-center">
-    <a href="mailto:ticiano.morvan@gmail.com" class="h-fit">
+    <a
+      href="mailto:ticiano.morvan@gmail.com"
+      aria-label="Send email to Ticiano"
+    >
       <Anchor href="mailto:ticiano.morvan@gmail.com">
         Send email
         <Icon name="tabler:mail" size="24" />
@@ -23,8 +26,13 @@ import socialsData from "../data/socials.json";
     <ul class="flex items-center gap-2">
       {
         socialsData.map((social) => (
-          <li title={`Link to Ticiano's ${social.name}`}>
-            <a href={social.url} target="_blank" rel="noreferrer">
+          <li>
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Link to Ticiano's ${social.name}`}
+            >
               <Icon name={social.icon} size="36" />
             </a>
           </li>
