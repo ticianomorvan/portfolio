@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon";
+
+import stackData from "../data/stack.json";
+---
+
+<section class="min-h-screen flex justify-around items-center">
+  <div>
+    <span
+      class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-600 text-blue-200"
+    >
+      <Icon name="tabler:tools" size="32" />
+      <p>Build software focusing on the problem, not the tools</p>
+    </span>
+
+    <div class="max-w-lg">
+      <h3 class="my-6 text-5xl font-serif">
+        It doesn't matter what we use, it matters <u>how</u> we use it.
+      </h3>
+      <p class="text-gray-400">
+        A lot of times we spend hours, days and even weeks trying to find the
+        perfect language, framework or tool for the job, but people doesn't
+        really care about all that. They need to fix their problems, as soon as
+        posible, and is our responsability to build the best software we can
+        with the tools we have at our hands.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col flex-wrap">
+    <ul class="max-w-lg flex flex-wrap gap-4">
+      {
+        stackData.map((item) => (
+          <li title={item.name}>
+            <Icon name={item.icon} size="64" />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

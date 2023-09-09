@@ -1,13 +1,26 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
+
+// Sections
+import Philosophy from "../components/Philosophy.astro";
+import Stack from "../components/Stack.astro";
+import Studies from "../components/Studies.astro";
 ---
 
 <Layout title="Ticiano Morvan, student & software developer">
 	<main>
 		<section class="min-h-screen flex flex-col items-center justify-center">
+			<Image
+				src="/profile.jpg"
+				alt="Ticiano Morvan's profile picture"
+				width={192}
+				height={192}
+				class="rounded-full"
+			/>
 			<span class="my-6 flex items-center">
 				<h1 class="text-6xl font-serif">Software that changes lifes, fast</h1>
 				<Icon class="text-yellow-600" name="ic:sharp-bolt" size="64" />
@@ -34,5 +47,11 @@ import Button from "../components/Button.astro";
 				</Button>
 			</div>
 		</section>
+
+		<Philosophy />
+
+		<Stack />
+
+		<Studies />
 	</main>
 </Layout>
