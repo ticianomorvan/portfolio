@@ -15,7 +15,7 @@ import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Ticiano Morvan, student & software developer">
-	<main>
+	<main class="p-4 lg:p-0">
 		<section class="min-h-screen flex flex-col items-center justify-center">
 			<Image
 				src="/images/profile.jpg"
@@ -25,17 +25,23 @@ import Contact from "../components/Contact.astro";
 				class="rounded-full"
 			/>
 			<span class="my-6 flex items-center">
-				<h1 class="text-6xl font-serif">Software that changes lifes, fast</h1>
-				<Icon class="text-yellow-600" name="ic:sharp-bolt" size="64" />
+				<h1 class="text-5xl text-center font-serif lg:text-6xl lg:text-start">
+					Software that changes lifes, fast
+				</h1>
+				<Icon
+					class="hidden text-yellow-600 lg:block"
+					name="ic:sharp-bolt"
+					size="64"
+				/>
 			</span>
 
-			<h2 class="text-xl text-gray-400">
+			<h2 class="text-xl text-center text-gray-400 lg:text-start">
 				Hi, I'm Ticiano Morvan, a college student and full-stack software
 				developer based in Argentina.
 			</h2>
 
 			<div class="flex gap-6 items-center">
-				<span class="flex items-center">
+				<span class="hidden lg:flex lg:items-center">
 					Learn about me and my work
 					<Icon name="tabler:arrow-narrow-down" size="24" />
 				</span>
@@ -43,7 +49,7 @@ import Contact from "../components/Contact.astro";
 				<Anchor href="#contact">
 					Work together
 					<Icon
-						class="transitio duration-150 group-hover:translate-x-1"
+						class="transition duration-150 group-hover:translate-x-1"
 						name="tabler:arrow-narrow-right"
 						size="24"
 					/>
