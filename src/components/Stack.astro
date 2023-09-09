@@ -4,7 +4,9 @@ import { Icon } from "astro-icon";
 import stackData from "../data/stack.json";
 ---
 
-<section class="min-h-screen flex justify-around items-center">
+<section
+  class="min-h-screen flex flex-col gap-8 justify-around items-center lg:flex-row lg:gap-0"
+>
   <div>
     <span
       class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-900 text-white"
@@ -28,7 +30,7 @@ import stackData from "../data/stack.json";
   </div>
 
   <div class="flex flex-col flex-wrap">
-    <ul class="max-w-lg flex flex-wrap gap-4">
+    <ul class="max-w-lg flex flex-wrap justify-center gap-4">
       {
         stackData.map((item) => (
           <li title={item.name}>

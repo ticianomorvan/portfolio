@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 ---
 
 <section class="min-h-screen flex flex-col justify-around items-center">
-  <span class="my-12">
+  <span class="my-4 max-w-lg lg:max-w-full">
     <h3 class="my-6 text-5xl font-serif">Impact</h3>
     <h4 class="text-xl">
       In more than three years of programming, I've had some interesting
@@ -11,9 +11,11 @@ import { Image } from "astro:assets";
     </h4>
   </span>
 
-  <div class="w-full my-6 flex justify-evenly items-center">
+  <div
+    class="w-full my-6 flex flex-col justify-evenly items-center lg:flex-row"
+  >
     <span class="max-w-lg">
-      <h3 class="my-6 text-5xl font-serif">Web Summit Rio</h3>
+      <h3 class="my-6 text-4xl font-serif">Web Summit Rio</h3>
       <p class="text-gray-400">
         This was the first event I attended, as well as the first event
         alongside CrESI. We participated as an Impact Startup of their ALPHA
@@ -28,13 +30,15 @@ import { Image } from "astro:assets";
       alt="Ticiano sitting on the sign of Web Summit Rio 2023"
       width={533}
       height={400}
-      class="rounded-lg"
+      class="my-4 rounded-lg lg:my-0"
     />
   </div>
 
-  <div class="w-full my-6 flex justify-evenly items-center">
+  <div
+    class="w-full my-6 flex flex-col justify-evenly items-center lg:flex-row"
+  >
     <span class="max-w-lg">
-      <h3 class="my-6 text-5xl font-serif">Leading an unexplored market</h3>
+      <h3 class="my-6 text-4xl font-serif">Leading an unexplored market</h3>
       <p class="text-gray-400">
         As days were passing and I was talking to more and more people, I
         discovered that we were trying to shine in a market with very few or no
@@ -44,20 +48,22 @@ import { Image } from "astro:assets";
       </p>
     </span>
 
-    <Image
-      src="/images/wsr_stand.jpeg"
-      alt="Ticiano presenting CrESI at Web Summit Rio 2023"
-      width={300}
-      height={200}
-      class="object-cover rounded-lg"
-    />
+    <span class="my-4 flex flex-wrap gap-4 lg:my-0">
+      <Image
+        src="/images/wsr_stand.jpeg"
+        alt="Ticiano presenting CrESI at Web Summit Rio 2023"
+        width={300}
+        height={200}
+        class="rounded-lg"
+      />
 
-    <Image
-      src="/images/wsr_conf.jpeg"
-      alt="Ticiano attending Startup Roundtables at Web Summit Rio 2023"
-      width={300}
-      height={200}
-      class="object-cover rounded-lg"
-    />
+      <Image
+        src="/images/wsr_conf.jpeg"
+        alt="Ticiano attending Startup Roundtables at Web Summit Rio 2023"
+        width={300}
+        height={200}
+        class="rounded-lg"
+      />
+    </span>
   </div>
 </section>

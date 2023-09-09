@@ -3,9 +3,9 @@ import { Icon } from "astro-icon";
 ---
 
 <section
-  class="min-h-screen flex flex-col gap-24 justify-around items-center md:flex-row md:gap-0"
+  class="min-h-screen my-12 flex flex-col gap-12 justify-around items-center lg:flex-row lg:gap-0"
 >
-  <div>
+  <div class="flex flex-col">
     <span
       class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-900 text-white"
     >
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon";
       <p>Build software that people cares about</p>
     </span>
 
-    <div class="max-w-xl">
+    <div class="max-w-lg">
       <h3 class="my-6 text-5xl font-serif">
         Because people have problems, and we must provide solutions
       </h3>
@@ -29,9 +29,13 @@ import { Icon } from "astro-icon";
 
   <div class="flex flex-col gap-12 justify-evenly">
     <span class="flex flex-col gap-2">
-      <b class="text-5xl">+1400 contributions</b>
-      <p class="flex gap-2 items-center text-xl text-gray-400">
-        <Icon name="tabler:brand-open-source" size="24" />
+      <b class="text-4xl lg:text-5xl">+1400 contributions</b>
+      <p class="flex gap-2 items-center text-lg text-gray-400 lg:text-xl">
+        <Icon
+          name="tabler:brand-open-source"
+          size="24"
+          class="hidden lg:block"
+        />
          For both open source and closed source software
       </p>
 
@@ -42,14 +46,14 @@ import { Icon } from "astro-icon";
         class="w-fit flex gap-1 items-center underline"
       >
         Check my contributions on GitHub
-        <Icon name="tabler:arrow-right" size="16" />
+        <Icon name="tabler:arrow-right" size="16" class="hidden lg:block" />
       </a>
     </span>
 
     <span class="flex flex-col gap-4">
-      <b class="text-5xl">+1020 hours</b>
-      <p class="flex gap-2 items-center text-xl text-gray-400">
-        <Icon name="tabler:code" size="24" />
+      <b class="text-4xl lg:text-5xl">+1020 hours</b>
+      <p class="flex gap-2 items-center text-lg text-gray-400 lg:text-xl">
+        <Icon name="tabler:code" size="24" class="hidden lg:block" />
          Improving codebases' quality
       </p>
 
@@ -60,14 +64,14 @@ import { Icon } from "astro-icon";
         class="w-fit flex gap-1 items-center underline"
       >
         Know about my preferred languages in Wakatime
-        <Icon name="tabler:arrow-right" size="16" />
+        <Icon name="tabler:arrow-right" size="16" class="hidden lg:block" />
       </a>
     </span>
 
     <span class="flex flex-col gap-4">
-      <b class="text-5xl">+3000 people</b>
-      <p class="flex gap-2 items-center text-xl text-gray-400">
-        <Icon name="tabler:heart-handshake" size="24" />
+      <b class="text-4xl lg:text-5xl">+3000 people</b>
+      <p class="flex gap-2 items-center text-lg text-gray-400 lg:text-xl">
+        <Icon name="tabler:heart-handshake" size="24" class="hidden lg:block" />
          Helped with fast and intuitive software
       </p>
 
@@ -77,7 +81,11 @@ import { Icon } from "astro-icon";
         rel="noreferrer"
         class="w-fit flex gap-1 items-center underline"
       >
-        Working with CrESI <Icon name="tabler:arrow-right" size="16" />
+        Working with CrESI <Icon
+          name="tabler:arrow-right"
+          size="16"
+          class="hidden lg:block"
+        />
       </a>
     </span>
   </div>
