@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
@@ -9,7 +9,7 @@ import { Icon } from "astro-icon";
     <span
       class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-900 text-white"
     >
-      <Icon name="tabler:pig-money" size="32" />
+      <Icon name="tabler:pig-money" size={32} />
       <p>Build software that moves the market</p>
     </span>
 
@@ -29,14 +29,16 @@ import { Icon } from "astro-icon";
   <div class="max-w-lg flex flex-col items-center gap-4">
     <h4 class="my-4 text-4xl font-serif">Experience</h4>
 
-    <div class="max-w-lg flex gap-x-8 items-start overflow-x-hidden">
+    <div class="max-w-lg flex flex-col gap-y-4">
       <span class="min-w-[16em]">
-        <h5 class="text-xl font-semibold">Full-stack developer @ DEX</h5>
+        <h5 class="text-xl font-semibold">Software Development Lead @ DEX</h5>
         <p class="my-2 text-gray-400">(Oct 2023 - Currently)</p>
         <p>Remote, USA.</p>
         <p class="my-2">
-          I develop web applications using latest technologies to build the next
-          generation of sales marketing, allowing people to close more deals, easily.
+          I'm a core mantainer and major responsible of our technical infrastructure.
+          I was able to reduce our infrastructure costs by 60% in just three months,
+          automatized deployment workflow reducing 66% of the time to build and deploy new features.
+          I built a complete SaaS product from scratch that got #11 product of the day at ProductHunt.
         </p>
       </span>
   

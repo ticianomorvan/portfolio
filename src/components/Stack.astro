@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 import stackData from "../data/stack.json";
 ---
@@ -11,7 +11,7 @@ import stackData from "../data/stack.json";
     <span
       class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-900 text-white"
     >
-      <Icon name="tabler:tools" size="32" />
+      <Icon name="tabler:tools" size={32} />
       <p>Build software focusing on the problem, not the tools</p>
     </span>
 
@@ -34,7 +34,7 @@ import stackData from "../data/stack.json";
       {
         stackData.map((item) => (
           <li title={item.name}>
-            <Icon name={item.icon} size="64" />
+            <Icon name={item.icon} size={64} />
           </li>
         ))
       }

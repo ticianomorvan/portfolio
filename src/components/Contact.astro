@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 import Anchor from "./Anchor.astro";
 
@@ -22,7 +22,7 @@ import socialsData from "../data/socials.json";
     >
       <Anchor href="mailto:ticiano.morvan@gmail.com">
         Send email
-        <Icon name="tabler:mail" size="24" />
+        <Icon name="tabler:mail" size={24} />
       </Anchor>
     </a>
 
@@ -36,7 +36,7 @@ import socialsData from "../data/socials.json";
               rel="noreferrer"
               aria-label={`Link to Ticiano's ${social.name}`}
             >
-              <Icon name={social.icon} size="36" />
+              <Icon name={social.icon} size={36} />
             </a>
           </li>
         ))

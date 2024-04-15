@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
@@ -24,14 +24,14 @@ import Contact from "../components/Contact.astro";
 				height={192}
 				class="rounded-full"
 			/>
-			<span class="my-6 flex items-center">
+			<span class="my-6 flex gap-x-2 items-center">
 				<h1 class="text-5xl text-center font-serif lg:text-6xl lg:text-start">
 					Software that changes lifes, fast
 				</h1>
 				<Icon
-					class="hidden text-yellow-600 lg:block"
-					name="ic:sharp-bolt"
-					size="64"
+					class="hidden lg:block lg:text-yellow-600 lg:rotate-[15deg]"
+					name="tabler:bolt"
+					size={48}
 				/>
 			</span>
 
@@ -43,7 +43,7 @@ import Contact from "../components/Contact.astro";
 			<div class="flex gap-6 items-center">
 				<span class="hidden lg:flex lg:items-center">
 					Learn about me and my work
-					<Icon name="tabler:arrow-narrow-down" size="24" />
+					<Icon name="tabler:arrow-narrow-down" size={24} />
 				</span>
 
 				<Anchor href="#contact">
@@ -51,7 +51,7 @@ import Contact from "../components/Contact.astro";
 					<Icon
 						class="transition duration-150 group-hover:translate-x-1"
 						name="tabler:arrow-narrow-right"
-						size="24"
+						size={24}
 					/>
 				</Anchor>
 			</div>

@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <section
@@ -9,7 +9,7 @@ import { Icon } from "astro-icon";
     <span
       class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-900 text-white"
     >
-      <Icon name="tabler:package" size="32" />
+      <Icon name="tabler:package" size={32} />
       <p>Build software that people cares about</p>
     </span>
 
@@ -29,11 +29,11 @@ import { Icon } from "astro-icon";
 
   <div class="flex flex-col gap-12 justify-evenly">
     <span class="flex flex-col gap-2">
-      <b class="text-4xl lg:text-5xl">+1400 contributions</b>
+      <b class="text-4xl lg:text-5xl">+1500 contributions</b>
       <p class="flex gap-2 items-center text-lg text-gray-400 lg:text-xl">
         <Icon
           name="tabler:brand-open-source"
-          size="24"
+          size={24}
           class="hidden lg:block"
         />
          For both open source and closed source software
@@ -46,15 +46,15 @@ import { Icon } from "astro-icon";
         class="w-fit flex gap-1 items-center underline"
       >
         Check my contributions on GitHub
-        <Icon name="tabler:arrow-right" size="16" class="hidden lg:block" />
+        <Icon name="tabler:arrow-right" size={16} class="hidden lg:block" />
       </a>
     </span>
 
     <span class="flex flex-col gap-4">
-      <b class="text-4xl lg:text-5xl">+1020 hours</b>
+      <b class="text-4xl lg:text-5xl">+1400 coding hours</b>
       <p class="flex gap-2 items-center text-lg text-gray-400 lg:text-xl">
-        <Icon name="tabler:code" size="24" class="hidden lg:block" />
-         Improving codebases' quality
+        <Icon name="tabler:code" size={24} class="hidden lg:block" />
+         Reducing costs and improving delivery
       </p>
 
       <a
@@ -64,14 +64,14 @@ import { Icon } from "astro-icon";
         class="w-fit flex gap-1 items-center underline"
       >
         Know about my preferred languages in Wakatime
-        <Icon name="tabler:arrow-right" size="16" class="hidden lg:block" />
+        <Icon name="tabler:arrow-right" size={16} class="hidden lg:block" />
       </a>
     </span>
 
     <span class="flex flex-col gap-4">
       <b class="text-4xl lg:text-5xl">+3000 people</b>
       <p class="flex gap-2 items-center text-lg text-gray-400 lg:text-xl">
-        <Icon name="tabler:heart-handshake" size="24" class="hidden lg:block" />
+        <Icon name="tabler:heart-handshake" size={24} class="hidden lg:block" />
          Helped with fast and intuitive software
       </p>
 
@@ -83,7 +83,7 @@ import { Icon } from "astro-icon";
       >
         Working with CrESI <Icon
           name="tabler:arrow-right"
-          size="16"
+          size={16}
           class="hidden lg:block"
         />
       </a>
