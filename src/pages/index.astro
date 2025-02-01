@@ -12,14 +12,16 @@ import Studies from "../components/Studies.astro";
 import Experience from "../components/Experience.astro";
 import Media from "../components/Media.astro";
 import Contact from "../components/Contact.astro";
+
+import avatarImage from "../assets/profile.jpg"
 ---
 
 <Layout title="Ticiano Morvan, student & software developer">
-	<main class="p-4 lg:p-0">
-		<section class="min-h-screen flex flex-col items-center justify-center">
+	<main class="p-4 lg:p-0 flex flex-col gap-y-24">
+		<section class="mt-24 mb-8 flex flex-col items-center justify-center">
 			<Image
-				src="/images/profile.jpg"
-				alt="Ticiano Morvan's profile picture"
+				src={avatarImage}
+				alt="Ticiano Morvan's avatar"
 				width={192}
 				height={192}
 				class="rounded-full"
@@ -36,8 +38,7 @@ import Contact from "../components/Contact.astro";
 			</span>
 
 			<h2 class="text-xl text-center text-gray-400 lg:text-start">
-				Hi, I'm Ticiano Morvan, a college student and full-stack software
-				developer based in Argentina.
+				Hi, I'm Ticiano Morvan, a Full-Stack Software Engineer based in Argentina.
 			</h2>
 
 			<div class="flex gap-6 items-center">

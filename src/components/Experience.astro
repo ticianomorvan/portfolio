@@ -3,9 +3,9 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section
-  class="min-h-screen flex flex-col gap-8 justify-around items-center lg:flex-row lg:gap-0"
+  class="flex flex-col gap-16 items-center"
 >
-  <div>
+  <div class="flex flex-col items-center text-center">
     <span
       class="w-fit px-4 py-2 flex gap-2 items-center rounded-full font-bold bg-blue-900 text-white"
     >
@@ -15,46 +15,32 @@ import { Icon } from "astro-icon/components";
 
     <div class="max-w-xl">
       <h3 class="my-6 text-5xl font-serif">
-        Companies aren't always an evil thing
+        Hands-on work experience. 
       </h3>
       <p class="text-gray-400">
-        Many people have the wrong general idea of corporations, and well, in a
-        lot of cases it's not that far away from the truth. But in my
-        experience, many companies have a great mission and need talent to build
-        the next big thing to improve quality of life in our society.
+      From building help and roadmap pages, to craft complete products and public-facing experiences in different sectors like education, health or technology. 
       </p>
     </div>
   </div>
 
-  <div class="max-w-lg flex flex-col items-center gap-4">
-    <h4 class="my-4 text-4xl font-serif">Experience</h4>
-
-    <div class="max-w-lg flex flex-col gap-y-4">
+  <div class="w-full flex flex-col items-center gap-4">
+    <div class="w-full flex flex-col gap-8 justify-center lg:flex-row lg:gap-16">
+      <span class="min-w-[16em]">
+        <h5 class="text-xl font-semibold">Software Engineer @ Emailchaser</h5>
+        <p class="my-2 text-gray-400">(Feb 2025 - Currently)</p>
+	<p>Remote, Puerto Rico.</p>
+      </span>
       <span class="min-w-[16em]">
         <h5 class="text-xl font-semibold">Software Development Lead @ DEX</h5>
-        <p class="my-2 text-gray-400">(Oct 2023 - Currently)</p>
+        <p class="my-2 text-gray-400">(Oct 2023 - Feb 2025)</p>
         <p>Remote, USA.</p>
-        <p class="my-2">
-          I'm a core mantainer and major responsible of our technical infrastructure.
-          I was able to reduce our infrastructure costs by 60% in just three months,
-          automatized deployment workflow reducing 66% of the time to build and deploy new features.
-          I built a complete SaaS product from scratch that got #11 product of the day at ProductHunt.
-        </p>
       </span>
   
       <span class="min-w-[16em]">
         <h5 class="text-xl font-semibold">Full-stack developer @ CrESI</h5>
         <p class="my-2 text-gray-400">(Dec 2022 - Oct 2023)</p>
         <p>Remote, Argentina.</p>
-        <p class="my-2">
-          I manage technical requirements and the digital ecosystem of CrESI. I
-          improved our principal website by rewriting it using Next.js 13 and gave
-          it a whole new interface and user experience that has helped more than
-          3.000 people to understand and learn about sexual and emotional
-          education by playing trivia quizzes and reading educative materials.
-        </p>
       </span>
-
     </div>
   </div>
 </section>
